@@ -3,9 +3,7 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Box, Button, Code, Heading, Link, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode, VStack } from "@chakra-ui/react"
-import { MoonIcon, SunIcon } from "@chakra-ui/icons"
-import NextLink from "next/link"
+import { Box, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode, VStack } from "@chakra-ui/react"
 import NextHead from "next/head"
 
 
@@ -63,35 +61,11 @@ export default function Component() {
   <Fragment/>
 )}
 </Fragment>
-  <Fragment>
-  <Button onClick={toggleColorMode} sx={{"float": "right"}}>
-  <Fragment>
-  {isTrue((colorMode === "light")) ? (
-  <Fragment>
-  <SunIcon/>
-</Fragment>
-) : (
-  <Fragment>
-  <MoonIcon/>
-</Fragment>
-)}
-</Fragment>
-</Button>
-  <VStack spacing={`1.5em`} sx={{"fontSize": "2em", "paddingTop": "10%"}}>
-  <Heading sx={{"fontSize": "2em"}}>
-  {`Welcome to Reflex!`}
-</Heading>
-  <Box>
-  {`Get started by editing `}
-  <Code sx={{"fontSize": "1em"}}>
-  {`link_bio/link_bio.py`}
-</Code>
-</Box>
-  <Link as={NextLink} href={`https://reflex.dev/docs/getting-started/introduction`} sx={{"border": "0.1em solid", "padding": "0.5em", "borderRadius": "0.5em", "_hover": {"color": isTrue((colorMode === "light")) ? `rgb(107,99,246)` : `rgb(179, 175, 255)`}}}>
-  {`Check out our docs!`}
-</Link>
+  <VStack sx={{"position": "sticky", "bg": "blue", "paddingX": "15px", "paddingY": "7px", "zIndex": "999"}}>
+  <Text sx={{"height": "30px", "color": "white"}}>
+  {`DevJG`}
+</Text>
 </VStack>
-</Fragment>
   <NextHead>
   <title>
   {`Reflex App`}
