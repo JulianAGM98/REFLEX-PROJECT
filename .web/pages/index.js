@@ -3,7 +3,8 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Box, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode, VStack } from "@chakra-ui/react"
+import { Avatar, Box, Button, Image, Link, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode, VStack } from "@chakra-ui/react"
+import NextLink from "next/link"
 import NextHead from "next/head"
 
 
@@ -61,10 +62,51 @@ export default function Component() {
   <Fragment/>
 )}
 </Fragment>
+  <VStack>
   <VStack sx={{"position": "sticky", "bg": "blue", "paddingX": "15px", "paddingY": "7px", "zIndex": "999"}}>
   <Text sx={{"height": "30px", "color": "white"}}>
   {`DevJG`}
 </Text>
+</VStack>
+  <VStack>
+  <Avatar name={`DevJG`} size={`xl`}/>
+  <Text>
+  {`@DevJG`}
+</Text>
+  <Text>
+  {`Hola, mi nombre es Julian.
+                Soy ingeniero de petróleos apasionado por el desarrollo web y ciencia de datos.
+                ¡Bienvendio a mi Web!`}
+</Text>
+</VStack>
+  <VStack>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
+  <Button>
+  {`My projects`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
+  <Button>
+  {`Youtube`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
+  <Button>
+  {`GitHub`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
+  <Button>
+  {`LinkedIN`}
+</Button>
+</Link>
+</VStack>
+  <VStack>
+  <Image src={`favicon.ico`}/>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98/REFLEX-PROJECT`} isExternal={true}>
+  {`@ 2022 - 2023 Desing By: DevJG`}
+</Link>
+</VStack>
 </VStack>
   <NextHead>
   <title>
