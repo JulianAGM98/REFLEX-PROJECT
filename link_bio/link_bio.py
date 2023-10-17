@@ -1,6 +1,7 @@
 import reflex as rx
 from link_bio.components.navbar import navbar
 
+
 class State(rx.State):
     pass
 
