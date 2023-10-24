@@ -3,8 +3,9 @@ import { useRouter } from "next/router"
 import { Event, getAllLocalStorageItems, getRefValue, getRefValues, isTrue, preventDefault, refs, spreadArraysOrObjects, uploadFiles, useEventLoop } from "/utils/state"
 import { EventLoopContext, initialEvents, StateContext } from "/utils/context.js"
 import "focus-visible/dist/focus-visible"
-import { Avatar, Box, Button, Image, Link, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, useColorMode, VStack } from "@chakra-ui/react"
+import { Avatar, Box, Button, Center, Flex, Heading, HStack, Image, Link, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Spacer, Text, useColorMode, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
+import { ArrowForwardIcon, LinkIcon } from "@chakra-ui/icons"
 import NextHead from "next/head"
 
 
@@ -62,52 +63,202 @@ export default function Component() {
   <Fragment/>
 )}
 </Fragment>
-  <VStack>
-  <VStack sx={{"position": "sticky", "bg": "blue", "paddingX": "15px", "paddingY": "7px", "zIndex": "999"}}>
-  <Text sx={{"height": "30px", "color": "white"}}>
+  <Box>
+  <HStack sx={{"position": "sticky", "bg": "lightgray", "paddingX": ["1em"], "paddingY": ["0.5em"], "zIndex": "999", "top": "0"}}>
+  <Text>
   {`DevJG`}
 </Text>
-</VStack>
-  <VStack>
-  <Avatar name={`DevJG`} size={`xl`}/>
-  <Text>
+</HStack>
+  <Center>
+  <VStack sx={{"maxWidth": "600px", "width": "100%", "marginY": "2em"}}>
+  <VStack alignItems={`start`} spacing={`2em`}>
+  <HStack spacing={`2em`}>
+  <Avatar name={`Julian Gonzalez`} size={`xl`}/>
+  <VStack alignItems={`start`}>
+  <Heading size={`lg`}>
+  {`Julián González`}
+</Heading>
+  <Text sx={{"padding": "0px !important"}}>
   {`@DevJG`}
 </Text>
+  <HStack>
+  <Link as={NextLink} href={`https://x.com`} isExternal={true} sx={{"textDecoration": "None", "_hover": {}}}>
+  <LinkIcon/>
+</Link>
+  <Link as={NextLink} href={`https://x.com`} isExternal={true} sx={{"textDecoration": "None", "_hover": {}}}>
+  <LinkIcon/>
+</Link>
+  <Link as={NextLink} href={`https://x.com`} isExternal={true} sx={{"textDecoration": "None", "_hover": {}}}>
+  <LinkIcon/>
+</Link>
+</HStack>
+</VStack>
+</HStack>
+  <Flex sx={{"width": "100%"}}>
+  <Box sx={{"fontSize": ["0.7em"]}}>
+  <Text as={`span`} sx={{"fontWeight": "bold", "color": "blue"}}>
+  {`+13 `}
+</Text>
+  {` años de experiencia`}
+</Box>
+  <Spacer/>
+  <Box sx={{"fontSize": ["0.7em"]}}>
+  <Text as={`span`} sx={{"fontWeight": "bold", "color": "blue"}}>
+  {`+13 `}
+</Text>
+  {` años de experiencia`}
+</Box>
+  <Spacer/>
+  <Box sx={{"fontSize": ["0.7em"]}}>
+  <Text as={`span`} sx={{"fontWeight": "bold", "color": "blue"}}>
+  {`+13 `}
+</Text>
+  {` años de experiencia`}
+</Box>
+</Flex>
   <Text>
   {`Hola, mi nombre es Julian.
-                Soy ingeniero de petróleos apasionado por el desarrollo web y ciencia de datos.
+                 Soy ingeniero de petróleos apasionado por el desarrollo web y ciencia de datos.
                 ¡Bienvendio a mi Web!`}
 </Text>
 </VStack>
-  <VStack>
-  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
-  <Button>
+  <VStack sx={{"width": "100%"}}>
+  <Heading size={`lg`} sx={{"size": "lg", "width": "100%", "paddingTop": ["1em"]}}>
+  {`Comunidad`}
+</Heading>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
   {`My projects`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Da click para ver mis proyectos`}
+</Text>
+</VStack>
+</HStack>
 </Button>
 </Link>
-  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
-  <Button>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
   {`Youtube`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Mi canal de youtube`}
+</Text>
+</VStack>
+</HStack>
 </Button>
 </Link>
-  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
-  <Button>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
   {`GitHub`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Todos mis repositorios`}
+</Text>
+</VStack>
+</HStack>
 </Button>
 </Link>
-  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true}>
-  <Button>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
   {`LinkedIN`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Mi experiencia`}
+</Text>
+</VStack>
+</HStack>
+</Button>
+</Link>
+  <Heading size={`lg`} sx={{"size": "lg", "width": "100%", "paddingTop": ["1em"]}}>
+  {`Comunidad`}
+</Heading>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
+  {`My projects`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Da click para ver mis proyectos`}
+</Text>
+</VStack>
+</HStack>
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
+  {`Youtube`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Mi canal de youtube`}
+</Text>
+</VStack>
+</HStack>
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
+  {`GitHub`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Todos mis repositorios`}
+</Text>
+</VStack>
+</HStack>
+</Button>
+</Link>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98`} isExternal={true} sx={{"width": "100%", "textDecoration": "None", "_hover": {}}}>
+  <Button sx={{"width": "100%", "height": "100%", "display": "block", "padding": ["0.5em"], "bordeRadius": "2em"}}>
+  <HStack>
+  <ArrowForwardIcon sx={{"width": ["1em"], "height": "2em"}}/>
+  <VStack alignItems={`start`}>
+  <Text sx={{"fontSize": ["1em"]}}>
+  {`LinkedIN`}
+</Text>
+  <Text sx={{"fontSize": ["0.7em"]}}>
+  {`Mi experiencia`}
+</Text>
+</VStack>
+</HStack>
 </Button>
 </Link>
 </VStack>
-  <VStack>
+</VStack>
+</Center>
+  <VStack sx={{"marginBottom": "2em"}}>
   <Image src={`favicon.ico`}/>
-  <Link as={NextLink} href={`https://github.com/JulianAGM98/REFLEX-PROJECT`} isExternal={true}>
+  <Link as={NextLink} href={`https://github.com/JulianAGM98/REFLEX-PROJECT`} isExternal={true} sx={{"fontSize": ["0.7em"], "textDecoration": "None", "_hover": {}}}>
   {`@ 2022 - 2023 Desing By: DevJG`}
 </Link>
 </VStack>
-</VStack>
+</Box>
   <NextHead>
   <title>
   {`Reflex App`}

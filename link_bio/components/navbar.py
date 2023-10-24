@@ -1,17 +1,17 @@
 import reflex as rx
+from link_bio.styles.style import sizes as sizes
 
 
 
 def navbar() -> rx.component:
-    return rx.vstack(
+    return rx.hstack(
         rx.text(
             "DevJG",
-            height = "30px",
-            color = "white"
         ),
         position = "sticky",
-        bg = 'blue',
-        padding_x = "15px",
-        padding_y = "7px",
-        z_index = "999"
+        bg = 'lightgray',
+        padding_x = sizes.DEFAULT.value,
+        padding_y = sizes.SMALLL.value,
+        z_index = "999",
+        top="0"
     )
