@@ -1,5 +1,7 @@
 import reflex as rx
 from link_bio.styles.style import sizes as sizes
+from link_bio.styles.colors import TextColor as TextColor
+from link_bio.styles.colors import Color as Color
 
 
 
@@ -9,9 +11,9 @@ def navbar() -> rx.component:
             "DevJG",
         ),
         position = "sticky",
-        bg = 'lightgray',
-        padding_x = sizes.DEFAULT.value,
-        padding_y = sizes.SMALLL.value,
+        bg = Color.CONTENT.value,
+        padding_x = sizes.BIG.value,
+        padding_y = sizes.DEFAULT.value,
         z_index = "999",
         top="0"
     )
