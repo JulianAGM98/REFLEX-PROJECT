@@ -2,13 +2,17 @@ import reflex as rx
 from link_bio.styles.style import sizes as sizes
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
+import link_bio.styles.style as styles
 
 
 
 def navbar() -> rx.component:
     return rx.hstack(
-        rx.text(
-            "DevJG",
+        rx.box(
+            rx.span("Julian ", color=Color.PRIMARY.value),
+            rx.span(" Gonzalez ", color=Color.SECONDARY.value),
+            rx.span(" | Python developer", color=Color.SECONDARY.value),
+            style=styles.nav_title_style 
         ),
         position = "sticky",
         bg = Color.CONTENT.value,
